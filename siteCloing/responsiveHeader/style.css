@@ -1,0 +1,59 @@
+.container {
+    background-color: beige;
+    height: 100vh;
+
+    display: flex;
+    /* flex-direction: row;
+    flex-wrap: nowrap; */
+    flex-flow: row nowrap;
+
+    justify-content: space-around;
+}
+
+.item{
+  height: 70px;
+  width: 70px;
+
+  border: solid 1px black;
+}
+
+.item1 {
+  background-color: red;
+}
+
+.item2 {
+  background-color: orangered;
+}
+
+.item3 {
+  background-color: orange;
+}
+
+.item4 {
+  background-color: yellow;
+}
+
+.item5 {
+  background-color: yellowgreen;
+}
+
+.item6 {
+  background-color: green;
+}
+
+.item7 {
+  background-color: blue;
+}
+
+.item8 {
+  background-color: violet;
+}
+
+.item9 {
+  background-color: blueviolet;
+}
+
+.item10 {
+  background-color: darkorchid;
+}
+
