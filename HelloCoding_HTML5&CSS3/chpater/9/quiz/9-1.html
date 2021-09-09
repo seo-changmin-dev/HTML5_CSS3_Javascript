@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+  <title>Q9-1.html</title>
+
+  <style>
+   table {
+     border-collapse: collapse;
+     width: 610px;
+   }
+
+   table, tr, th, td {
+     border: solid 1px black;
+   }
+
+   tr {
+     text-align: center;
+   }
+
+   td, th {
+     padding: 5px;
+   }
+
+   .train {
+     background-color: pink;
+     color: red;
+     font-weight: bold;
+     text-decoration: underline;
+   }
+
+   #col1, #col4 {
+     width: 90px;
+   }
+
+   #col2, #col3 {
+     width: 60px;
+   }
+
+   #col5, #col6 {
+     width: 80px;
+   }
+  </style>
+</head>
+<body>
+  <h2>열차표 예매</h2>
+
+  <table>
+    <tr>
+      <th id="col1">열차번호</th>
+      <th id="col2">출발</th>
+      <th id="col3">도착</th>
+      <th id="col4">출발시간</th>
+      <th id="col5">특실</th>
+      <th id="col6">일반실</th>
+      <th>소요시간</th>
+    </tr>
+    <tr>
+      <td class="train">199</td>
+      <td>수원</td>
+      <td>대전</td>
+      <td>10:00</td>
+      <td><img src="../source/img/empty.png"></td>
+      <td><img src="../source/img/full.png"></td>
+      <td>01:44</td>
+    </tr>
+    <tr>
+      <td class="train">230</td>
+      <td>수원</td>
+      <td>대전</td>
+      <td>11:30</td>
+      <td><img src="../source/img/empty.png"></td>
+      <td><img src="../source/img/full.png"></td>
+      <td>01:38</td>
+    </tr>
+  </table>
+</body>
+</html>
