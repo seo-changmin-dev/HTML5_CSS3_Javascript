@@ -57,17 +57,29 @@ header {
   padding: 20px;
 }
 
-.search_container ul {
+.search_text_bar {
+}
+
+.search_text_bar ul {
+  display: flex;
+  flex-flow: row unwrap;
+
+  list-style: none;
+}
+
+.search_btns {
   display: flex;
   flex-flow: row nowrap;
 
   padding-top: 18px;
   list-style: none;
-
 }
 
-.search_container li {
+.search_btns li {
+  margin: 11px 4px;
   padding: 12px 12px;
+  
+  border-radius: 5px;
   background-color: #FAFAFA;
 }
 
