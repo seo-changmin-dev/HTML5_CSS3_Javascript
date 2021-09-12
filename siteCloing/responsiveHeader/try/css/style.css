@@ -7,6 +7,7 @@
   display: flex;
 
   justify-content: space-between;
+  align-items: center;
 
   background-color: #223344;
   color: whitesmoke;
@@ -17,34 +18,46 @@
 .title_container {
   display: flex;
 
+  font-size: 12px;
   border: solid 1px red;
+}
+
+.title_container h1 {
+  padding: 4px 8px;
 }
 
 .menu_container {
   display: flex;
 
+  font-size: 12px;
   list-style: none;
   border: solid 1px red;
 }
 
 .menu_container li {
-  border: solid 1px blue;
+  padding: 4px 12px;
+
+  border: solid 1px black;
 }
 
 .sns_container{
   display: flex;
 
+  font-size: 12px;
   list-style: none;
   border: solid 1px red;
 }
 
 .sns_container li {
+  padding: 4px 8px;
+
   border: solid 1px blue;
 }
 
 @media screen and (max-width: 768px) {
   .header_container {
     flex-direction: column;
+
   }
 
   .menu_container {
