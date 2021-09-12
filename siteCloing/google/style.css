@@ -57,17 +57,43 @@ header {
   padding: 20px;
 }
 
-.search_container ul {
+.search_text_bar {
+  width: 80%;
+  height: 44px;
+  max-width: 582px;
+
+  border: solid 1px #dcdcdc;
+  border-radius: 100px;
+}
+
+.search_text_bar ul {
+  display: flex;
+  flex-flow: row unwrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+
+  list-style: none;
+}
+
+.search_text_bar_icon {
+  padding: 0 8px;
+}
+
+.search_btns {
   display: flex;
   flex-flow: row nowrap;
 
   padding-top: 18px;
   list-style: none;
-
 }
 
-.search_container li {
+.search_btns li {
+  margin: 11px 4px;
   padding: 12px 12px;
+  
+  border-radius: 5px;
   background-color: #FAFAFA;
 }
 
