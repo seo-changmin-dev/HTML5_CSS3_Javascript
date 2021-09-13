@@ -1,23 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
 
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="./styles/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap" rel="stylesheet">
+
 
   <script src="https://kit.fontawesome.com/cb362b69bf.js" crossorigin="anonymous"></script>
-
-  <script src="main.js" defer></script>
+  <script src="./scripts/main.js" defer></script>
 </head>
 
 <body>
   <header class="header-bar">
     <div class="header-bar__logo">
       <i class="fab fa-youtube"></i>
-      <div>Youtube</div>
+      <div class="header-bar__logo-name">Youtube</div>
     </div>
 
     <div class="header-bar__search">
@@ -27,7 +31,9 @@
   </header>
 
   <section class="video-player">
-    
+    <video class="video-player__align_center" height=30% controls>
+      <source src="./src/video/sampleVideo.mp4" type="video/mp4" />
+    </video>
   </section>
 
   <section class="video-info">
@@ -47,21 +53,45 @@
     </div>
 
     <ul class="video-info__user-evals">
-      <li><i class="far fa-thumbs-up"></i></li>
-      <li><i class="far fa-thumbs-down"></i></li>
-      <li><i class="fas fa-share"></i></li>
-      <li><i class="fas fa-plus"></i></li>
-      <li><i class="fas fa-flag"></i></li>
+      <li>
+        <a href="#"><i class="far fa-thumbs-up"></i></a>
+        <div>1K</div>
+      </li>
+      <li>
+        <a href="#"><i class="far fa-thumbs-down"></i></a>
+        <div>0</div>
+      </li>
+      <li>
+        <a href="#"><i class="fas fa-share"></i></a>
+        <div>share</div>
+      </li>
+      <li>
+        <a href="#"><i class="fas fa-plus"></i></a>
+        <div>save</div>
+      </li>
+      <li>
+        <a href="#"><i class="fas fa-flag"></i></a>
+        <div>report</div>
+      </li>
     </ul>
 
     <div class="video-info__channel">
-      <div></div>
-      <div></div>
-      <i class="fas fa-ellipsis-v"></i>
+      <div>
+        <img src="" alt="" srcset="">
+        <div>
+          <div>드림코딩 by 엘리</div>
+          <div>1M subscribers</div>
+        </div>
+      </div>
+      <button class="video-info__channel__btn">SUBSCRIBE</button>
     </div>
   </section>
 
   <section class="video-recommended">
+    <div>
+      Up next
+    </div>
+
     <div class="video-recommended__item">
       <div>
         img
@@ -80,4 +110,5 @@
     </div>
   </section>
 </body>
+
 </html>
