@@ -1,0 +1,48 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.gnb_search {
+  display: flex;
+  justify-content: space-between;
+}
+
+.gnb_search > .options {
+  display: flex;
+
+  list-style-type: none;
+}
+
+.main_video_info {
+  display: flex;
+  flex-direction: column;
+}
+
+.main_video_info > .user_eval {
+  display: flex;
+  justify-content: space-around;
+
+  list-style-type: none;
+}
+
+.channel_info {
+  display: flex;
+  justify-content: space-between;
+}
+
+.channel_info > .channel_detail {
+  display: flex;
+
+  list-style-type: none;
+}
+
+.recommended_video {
+  display: flex;
+  flex-direction: column;
+}
+
+.recommended_video > .recommended_video_info {
+  display: flex;
+  justify-content: space-between;
+}
