@@ -7,14 +7,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
 
+  <!-- CSS -->
   <link rel="stylesheet" href="./styles/style.css">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
   <script src="https://kit.fontawesome.com/cb362b69bf.js" crossorigin="anonymous"></script>
 
 </head>
 
 <body>
   <header class="gnb_search">
-    <div>
+    <div class="site_title">
       <i class="fab fa-youtube"></i>
       <span>Youtube</span>
     </div>
@@ -30,39 +38,108 @@
   </section>
 
   <section class="main_video_info">
-    <span>#DreamCoding</span>
-    <div>Video TItle</div>
-    <span>1M views 1 month ago</span>
+    <ul class="hash_tag">
+      <li>#DreamCoding</li>
+      <li>#DreamCoders</li>
+      <li>#Ellie</li>
+    </ul>
+    <span class="video_title">클론코딩 유튜브 사이트 따라 만들기(HTML+CSS 연습편, 웹 포트폴리오) | 프론트엔드 개발자 입문편: HTML, CSS, Javascript</span>
+    <ul class="user_views">
+      <li>1M views</li>
+      <li>1 month ago</li>
+    </ul>
 
     <ul class="user_eval">
-      <li><i class="far fa-thumbs-up"></i></li>
-      <li><i class="far fa-thumbs-down"></i></li>
-      <li><i class="fas fa-share"></i></li>
-      <li><i class="fas fa-plus"></i></li>
-      <li><i class="fas fa-flag"></i></li>
+      <li>
+        <i class="far fa-thumbs-up"></i>
+        <span>1K</span>
+      </li>
+      <li>
+        <i class="far fa-thumbs-down"></i>
+        <span>0</span>
+      </li>
+      <li>
+        <i class="fas fa-share"></i>
+        <span>Share</span>
+      </li>
+      <li>
+        <i class="fas fa-plus"></i>
+        <span>Save</span>
+      </li>
+      <li>
+        <i class="fas fa-flag"></i>
+        <span>Report</span>
+      </li>
     </ul>
   </section>
 
   <section class="channel_info">
-    <ul class="channel_detail">
-      <li>logo</li>
-      <li>채널명</li>
-    </ul>
+    <div class="profile">
+      <img class="thumbnail"src="./src/image/channels4_profile.jpg" alt="" srcset="">
+      <ul>
+        <li class="title">드림코딩 by 엘리</li>
+        <li class="subscriber_cnt">1M subscribers</li>
+      </ul>
+    </div>
 
-    <div><button>SUBSCRIBE</button></div>
+    <button class="subscribe_btn">SUBSCRIBE</button>
   </section>
 
   <section class="recommended_video">
-    <span>Up Next</span>
-    <div class="recommended_video_info">
-      <div>ThumbNail</div>
-      <ul>
-        <li>Title</li>
-        <li>channelName</li>
-        <li>views</li>
-      </ul>
+    <span class="up_next">Up Next</span>
+    <div class="video_info">
+      <div class="profile">
+        <img class="thumbnail" src="./src/image/videoThumb/hqdefault.webp" alt="" srcset="">
+        <ul>
+          <li class="title">클론코딩 유튜브 사이트 따라 만들기(HTML+CSS 연습편, 웹 포트폴리오) | 프론트엔드 개발자 입문편: HTML, CSS, Javascript</li>
+          <li class="channel_name">드림코딩 by 엘리</li>
+          <li class="views">1M views</li>
+        </ul>
+      </div>
+
       <i class="fas fa-ellipsis-v"></i>
     </div>
+
+    <div class="video_info">
+      <div class="profile">
+        <img class="thumbnail" src="./src/image/videoThumb/hqdefault.webp" alt="" srcset="">
+        <ul>
+          <li class="title">클론코딩 유튜브 사이트 따라 만들기(HTML+CSS 연습편, 웹 포트폴리오) | 프론트엔드 개발자 입문편: HTML, CSS, Javascript</li>
+          <li class="channel_name">드림코딩 by 엘리</li>
+          <li class="views">1M views</li>
+        </ul>
+      </div>
+
+      <i class="fas fa-ellipsis-v"></i>
+    </div>
+
+    <div class="video_info">
+      <div class="profile">
+        <img class="thumbnail" src="./src/image/videoThumb/hqdefault.webp" alt="" srcset="">
+        <ul>
+          <li class="title">클론코딩 유튜브 사이트 따라 만들기(HTML+CSS 연습편, 웹 포트폴리오) | 프론트엔드 개발자 입문편: HTML, CSS, Javascript</li>
+          <li class="channel_name">드림코딩 by 엘리</li>
+          <li class="views">1M views</li>
+        </ul>
+      </div>
+
+      <i class="fas fa-ellipsis-v"></i>
+    </div>
+
+    <div class="video_info">
+      <div class="profile">
+        <img class="thumbnail" src="./src/image/videoThumb/hqdefault.webp" alt="" srcset="">
+        <ul>
+          <li class="title">클론코딩 유튜브 사이트 따라 만들기(HTML+CSS 연습편, 웹 포트폴리오) | 프론트엔드 개발자 입문편: HTML, CSS, Javascript</li>
+          <li class="channel_name">드림코딩 by 엘리</li>
+          <li class="views">1M views</li>
+        </ul>
+      </div>
+
+      <i class="fas fa-ellipsis-v"></i>
+    </div>
+
+    
   </section>
 </body>
 
