@@ -51,6 +51,21 @@ body {
   background-color: var(--black-color);
 }
 
+.Bottom_Bar {
+  display: flex;
+  flex-direction: column;
+}
+
+.Bottom_Bar > .Lhs {
+  display: flex;
+  flex-direction: column;
+}
+
+.Bottom_Bar > .Rhs {
+  display: flex;
+  flex-direction: column;
+}
+
 .main_video_info {
   display: flex;
   flex-direction: column;
@@ -204,4 +219,10 @@ body {
 
 .recommended_video > .video_info > .profile .views {
   font-size: var(--micro-font);
+}
+
+@media screen and (min-width: 768px) {
+  .Bottom_Bar {
+    flex-direction: row;
+  }
 }
