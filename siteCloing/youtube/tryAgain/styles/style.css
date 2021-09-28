@@ -225,4 +225,12 @@ body {
   .Bottom_Bar {
     flex-direction: row;
   }
+
+  .Bottom_Bar > .Lhs {
+    flex: 2;
+  }
+
+  .Bottom_Bar > .Rhs {
+    flex: 1;
+  }
 }
