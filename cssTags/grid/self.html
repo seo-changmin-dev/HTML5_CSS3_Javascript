@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+  
+<style>
+  .parent {
+    width: 480px;
+    height: 720px;
+
+    display: grid;
+    grid-template-columns: repeat(2, 200px);
+    grid-template-rows: repeat(2, 200px);
+    
+    justify-content: center;
+    align-content: center;
+
+    justify-items: center;
+    align-items: center;
+
+    background-color: khaki;
+    border: solid 3px black;
+  }
+
+  .parent div {
+    width: 100px;
+    height: 100px;
+
+    background-color: hotpink;
+
+    color: white;
+    text-align: center;
+    font-size: 30px;
+  }
+
+  .parent div:nth-child(2) {
+    align-self: start;
+  }
+
+  .parent div:nth-child(3) {
+    justify-self: start;
+  }
+
+  .parent div:nth-child(4) {
+    justify-self: end;
+    align-self: end;
+  }
+</style>
+<body>
+  <div class="parent">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+  </div>
+</body>
+</html>

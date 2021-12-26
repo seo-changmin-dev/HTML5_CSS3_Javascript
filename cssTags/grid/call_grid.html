@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    .parent {
+      border: solid 5px #000;
+      display: inline-grid;
+
+      /* grid-template-columns: 100px 300px; */
+      /* grid-template-rows: 100px 300px auto; */
+      grid: 100px 200px 80px / 100px 200px 150px;
+
+      /* grid-column-gap, grid-row-gap, grid-gap are DEPRECATED*/
+
+      /* row-gap: 30px; */
+      /* column-gap: 10px; */
+      gap: 30px 20px;
+    }
+
+    .parent div {
+      border: solid 1px #fff;
+      background-color: yellowgreen;
+
+      color: #fff;
+      text-align: center;
+      font-size: 30px;
+      padding: 0 30px;
+    }
+  </style>
+
+</head>
+<body>
+  <div class="parent">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+    <div>6</div>
+    <div>7</div>
+    <div>8</div>
+    <div>9</div>
+  </div>
+</body>
+</html>
