@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<style>
+  .parent {
+    height: 720px;
+    width: 1080px;
+
+    display: grid;
+    grid-template-columns: repeat(6, auto);
+    gap: 10px;
+
+    background-color: khaki;
+    border: solid 3px black;
+  }
+
+  .parent div {
+    border: solid 1px black;
+
+    text-align: center;
+    font-size: 30px;
+  }
+
+  /* .item {
+    background-color: crimson;
+
+    grid-area: 1/2 / 5/6;
+  } */
+
+  .item {
+    grid-area: 2/1 / span 2/span 3;
+    
+    background-color: crimson;
+  }
+
+</style>
+
+<body>
+  <div class="parent">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+    <div>6</div>
+    <div>7</div>
+    <div class="item">8</div>
+    <div>9</div>
+    <div>10</div>
+    <div>11</div>
+    <div>12</div>
+    <div>13</div>
+    <!-- <div>14</div>
+    <div>15</div> -->
+  </div>
+</body>
+</html>
