@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple BMI!</title>
+
+  <script>
+    // HTML 요소의 load가 끝난순간, onload에 연결되어 있는 함수가 event를 시작함
+    window.onload = function () {
+      let h = document.getElementById("height");
+      let w = document.getElementById("weight");
+      let bmi_field = document.getElementById("bmi_result");
+      let btn_calc = document.getElementById("btn_calc");
+
+      btn_calc.onclick = function () {
+        let curr_h = parseFloat(h.value);
+        let curr_w = parseFloat(w.value);
+
+        let bmi = (curr_w/curr_h/curr_h).toFixed(2);
+        bmi_field.innerHTML = bmi;
+      }
+    }
+  </script>
+
+</head>
+<body>
+  <div>
+    <p>키: <input type="text" id="height"> m</p>
+    <p>몸무게: <input type="text" id="weight"> kg</p>
+
+    <p>당신의 BMI 지수는 <output id = "bmi_result"></output> 입니다.</p>
+    <input type="button" value="Calc" id="btn_calc">
+  </div>
+</body>
+</html>

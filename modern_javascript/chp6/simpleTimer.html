@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple Timer!</title>
+
+  <script>
+    window.onload = function () {
+      let div_timer = document.getElementById("div_timer");
+      let btn_start = document.getElementById("btn_start");
+      let btn_stop = document.getElementById("btn_stop");
+
+      let timeElapsed, timer;
+      btn_start.onclick = start; // start()시 start 함수의 실행 결과값을 대입하는 결과가 된다.
+
+      function start() {
+        btn_start.onclick = null;
+        btn_stop.onclick = stop;
+
+        timeElapsed = 0;
+        timer = setInterval(function() {
+          timeElapsed = timeElapsed + 0.01;
+          div_timer.innerHTML = timeElapsed.toFixed(2);
+          // innerText와 차이점 - HTML은 HTML요소를 해석하여 substitute, innerText는 입력값 그대로 substitute
+        }, 10);
+      }
+
+      function stop() {
+        clearInterval(timer);
+        btn_start.onclick = start;
+        btn_stop.onclick = null;
+      }
+      
+    }
+  </script>
+</head>
+<body>
+  <div id="div_timer">00:00</div>
+
+  <div>
+    <input type="button" value="Start" id="btn_start">
+    <input type="button" value="Stop" id="btn_stop">
+  </div>
+</body>
+</html>
