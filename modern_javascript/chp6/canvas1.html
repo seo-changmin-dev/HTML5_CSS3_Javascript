@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <script>
+    window.onload = function _onload() {
+      let canvas = document.getElementById("simple_canvas");
+      let ctx = canvas.getContext('2d');
+
+      // Triangle
+      ctx.beginPath();
+      ctx.moveTo(320, 80);
+      ctx.lineTo(160, 240);
+      ctx.lineTo(480, 240);
+      ctx.stroke();
+
+      // ctx.closePath();
+      // ctx.fill();
+
+      // Ternary Divided Circle
+      let angle_to_rad = function (angle) {
+        return (angle / 180) * Math.PI;
+      }
+
+      ctx.beginPath();
+      ctx.arc(500, 500, 100, angle_to_rad(30), angle_to_rad(150), false);
+      ctx.strokeStyle = "red";
+      ctx.stroke();
+      
+      ctx.beginPath();
+      ctx.strokeStyle = "green";
+      ctx.arc(500, 500, 100, angle_to_rad(150), angle_to_rad(270), false);
+      ctx.stroke();
+
+      ctx.beginPath();
+      ctx.strokeStyle = "blue";
+      ctx.arc(500, 500, 100, angle_to_rad(270), angle_to_rad(390), false);
+      ctx.stroke();
+      ctx.closePath();
+
+      let draw_hexagon = function _draw_hexagon(x, y, r, line_width, line_join) {
+        let long_leg = r * Math.sqrt(3/2);
+        let short_leg = r / Math.SQRT2;
+
+        ctx.beginPath();
+        ctx.moveTo(x, y);
+        
+        x = x + r;
+        y = y;
+        ctx.lineTo(x, y);
+        
+        x = x + short_leg;
+        y = y + long_leg;
+        ctx.lineTo(x, y);
+
+        x = x - short_leg;
+        y = y + long_leg;
+        ctx.lineTo(x, y);
+
+        x = x - r;
+        y = y;
+        ctx.lineTo(x, y);
+
+        x = x - short_leg;
+        y = y - long_leg;
+        ctx.lineTo(x, y);
+
+        x = x + short_leg;
+        y = y - long_leg;
+        ctx.lineTo(x, y);
+
+        ctx.strokeStyle = "black";
+        ctx.lineWidth = line_width;
+        ctx.lineJoin = line_join;
+
+        ctx.stroke();
+        ctx.closePath();
+      }
+      
+      // miter, round, bevel
+      draw_hexagon(700, 700, 50, 30, "bevel");
+    }
+  </script>
+
+  <style>
+    canvas {
+      border: solid 1px black;
+    }
+  </style>
+
+</head>
+<body>
+  <canvas id="simple_canvas" height=1024 width=1280></canvas>
+</body>
+</html>
