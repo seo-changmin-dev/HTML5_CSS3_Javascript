@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    .container {
+      display: grid;
+      grid-template-areas: 'hd hd hd hd'
+                           'gnb main . lnb'
+                           'gnb ft ft ft';
+
+      border: solid 5px black;
+      background-color: khaki;
+    }
+
+    .container * {
+      border:solid 1px black;
+
+      text-align: center;
+    }
+
+    .hd {
+      grid-area: hd;
+    }
+
+    .gnb {
+      grid-area: gnb;
+    }
+
+    .main {
+      grid-area: main;
+    }
+
+    .lnb {
+      grid-area: lnb;
+    }
+
+    .ft {
+      grid-area: ft;
+    }
+  </style>
+
+</head>
+<body>
+  <div class="container">
+    <header class="hd">header</header>
+    <nav class="gnb">gnb</nav>
+    <main class="main">main</main>
+    <nav class="lnb">lnb</nav>
+    <footer class="ft">footer</footer>
+  </div>
+</body>
+</html>
