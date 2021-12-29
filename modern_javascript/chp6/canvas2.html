@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    canvas {
+      border: solid 3px black;
+    }
+  </style>
+
+  <script>
+    window.onload = function _win_onload() {
+      let canvas = document.getElementById("my_canvas");
+      let rgb_result = document.getElementById("rgb_result");
+      let ctx = canvas.getContext("2d");
+
+      let img = new Image();
+      img.src = "./cat.jpg";
+
+      img.onload = function _img_onload() { // After cat.jpg is loaded, draw img on canvas
+        ctx.drawImage(img, 100, 100, 480, 320);
+
+        //  drawImage(image, sx, sy, sw, sh, x, y, width, height)
+        ctx.drawImage(img, 50, 200, 160, 160, 700, 200, 360, 360);
+
+        let image_data = ctx.getImageData(0, 0, canvas.width, canvas.height);
+        
+        image_data.get_rbga = function(m, n, i) {
+          return this.data[this.width*4*n + 4*m + i];
+        }
+
+        canvas.onclick = function (event) {
+          let x = event.offsetX;
+          let y = event.offsetY;
+
+          rgb_result.innerHTML = `R: ${image_data.get_rbga(x, y, 0)}
+                                  G: ${image_data.get_rbga(x, y, 1)}
+                                  B: ${image_data.get_rbga(x, y, 2)}`; 
+        }
+      }
+      
+    }
+  </script>
+</head>
+
+<body>
+  <canvas id="my_canvas" height="1048" width="1280"></canvas>
+  <div><output id="rgb_result"></output></div>
+</body>
+</html>
