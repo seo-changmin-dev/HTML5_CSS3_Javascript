@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Timer</title>
+
+  <script>
+    let to_two_digit = function _to_two_digit(num) {
+      return Number(num) < 10 ? '0' + num : num;
+    }
+
+    window.onload = function _onload() {
+      const digits_min = document.getElementById("digits_min");
+      const digits_sec = document.getElementById("digits_sec");
+      const digits_cs = document.getElementById("digits_cs");
+
+      const btn_start = document.getElementById("btn_start");
+      const btn_stop = document.getElementById("btn_stop");
+      const btn_reset = document.getElementById("btn_reset");
+
+      let update_digits = function _update_digits(time_elpased) {
+        let temp_time_elpased = parseInt(time_elpased);
+        digits_cs.innerHTML = to_two_digit(temp_time_elpased % 60);
+
+        temp_time_elpased = parseInt(temp_time_elpased / 60);
+        digits_sec.innerHTML = to_two_digit(temp_time_elpased % 60);
+
+        temp_time_elpased = parseInt(temp_time_elpased / 60);
+        digits_min.innerHTML = to_two_digit(temp_time_elpased % 60);
+      }
+
+      let time_elpased = 0;
+      let interval_context = null;
+
+      let start_timer = function _start_timer() {
+        console.warn("start_timer()");
+
+        interval_context = setInterval(function () {
+          time_elpased += 1;
+          update_digits(time_elpased);
+        }, 10)
+
+        btn_start.onclick = null;
+      }
+
+      let stop_timer = function _stop_timer() {
+        console.warn("stop_timer()");
+
+        clearInterval(interval_context);
+
+        btn_start.onclick = start_timer;
+      }
+
+      let reset_timer = function _reset_timer() {
+        console.warn("reset_timer()");
+        stop_timer(interval_context);
+
+        time_elpased = 0;
+        update_digits(time_elpased);
+      }
+
+      btn_start.onclick = start_timer;
+      btn_stop.onclick = stop_timer;
+      btn_reset.onclick = reset_timer;
+    }
+  </script>
+
+  <style>
+    .timer_container {
+      width: 720px;
+
+      display: grid;
+
+      grid-template-columns: repeat(8, 1fr);
+      grid-template-rows: repeat(5, 1fr);
+
+      justify-items: center;
+      align-items: center;
+
+      background-color: khaki;
+    }
+
+    .timer_digits {
+      grid-area: 1/1 / 4/9;
+      width: 100%;
+      height: 100%;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .timer_digits div {
+      font-size: 40px;
+    }
+
+    .timer_btns {
+      grid-area: 4/1 / 5/9;
+      width: 100%;
+      height: 100%;
+
+      display: flex;
+      justify-content: space-around;
+    }
+
+    .timer_btns * {
+      width: 20%;
+      height: 50px;
+    }
+
+    #btn_start {
+      border: none;
+      background-color: yellowgreen;
+      color: whitesmoke;
+    }
+
+    #btn_stop {
+      border: none;
+      background-color: tomato;
+      color: whitesmoke;
+    }
+
+    #btn_reset {
+      border: none;
+      background-color: orange;
+      color: whitesmoke;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="timer_container">
+    <div class="timer_digits">
+      <div class="digits_min" id="digits_min">00</div>
+      <div class="separator">:</div>
+      <div class="digits_sec" id="digits_sec">00</div>
+      <div class="separator">.</div>
+      <div class="digits_cs" id="digits_cs">00</div>
+    </div>
+
+    <div class="timer_btns">
+      <input type="button" value="Start" id="btn_start">
+      <input type="button" value="Stop" id="btn_stop">
+      <input type="button" value="Reset" id="btn_reset">
+    </div>
+  </div>
+</body>
+
+</html>
