@@ -1,0 +1,22 @@
+* {
+  margin: 0;
+  padding: 0;
+
+  box-sizing: border-box;
+}
+
+div {
+  border: solid 1px black;
+}
+
+.title-box {
+  height: 4%;
+  min-height: 60px;
+}
+
+.image-box {
+  height: 96%;
+  min-height: 1455px;
+
+  background-color: beige;
+}

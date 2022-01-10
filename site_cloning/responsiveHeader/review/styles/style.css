@@ -1,0 +1,154 @@
+:root {
+  --main-color: #EF5350;
+  --sub-color: #FF867C;
+  --point-color: #b61827;
+
+  --font-color: black;
+  --point-font-color: whitesmoke;
+}
+
+@font-face {
+  font-family: "roboto";
+  src: url("../fonts/Roboto/Roboto-Regular.ttf");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+
+  box-sizing: border-box;
+  font-family: "roboto";
+}
+
+/* Default Design - Desktop View */
+.main-header {
+  height: 80px;
+  width: 100%;
+  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+  background-color: var(--main-color);
+}
+
+.header-title {
+  height: 100%;
+  padding: 0 16px 0 16px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  text-decoration: none;
+  color: var(--font-color);
+}
+
+.header-title__icon {
+  margin-right: 16px;
+  font-size: 32px;
+}
+
+.header-title__title {
+  white-space: nowrap;
+}
+
+.header-gnb__list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  list-style-type: none;
+}
+
+.header-gnb li {
+  margin: 0 8px 0 8px;
+  padding: 8px;
+
+  font-size: 20px;
+}
+
+.header-links {
+  padding: 0 16px 0 16px;
+}
+
+.header-links__list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  list-style-type: none;
+}
+
+.header-links__list li {
+  padding: 4px 8px 4px 8px;
+
+  font-size: 24px;
+}
+
+.header-links__list li i {
+  color: var(--font-color);
+}
+
+.header-toggle-btn {
+  display: none;
+}
+
+/* action */
+.header-gnb li:hover {
+  cursor: pointer;
+  color: var(--point-font-color);
+  background-color: var(--point-color);
+}
+
+
+/* Mobile View */
+@media (max-width: 768px) {
+  .main-header {
+    width: 100%;
+    height: auto;
+
+    flex-direction: column;
+  }
+
+  .header-title {
+    height: 80px;
+
+    align-self: flex-start;
+  }
+
+  .header-gnb {
+    width: 100%;
+  }
+
+  .header-gnb__list {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .header-gnb__list li {
+    width: 100%;
+    text-align: center;
+  }
+
+  .header-links {
+    margin-top: 8px;
+    margin-bottom: 8px;
+  }
+
+  .header-toggle-btn {
+    display: block;
+    position: absolute;
+    top: 13px;
+    right: 16px;
+
+    padding: 8px;
+    font-size: 32px;
+  }
+
+  /* action */
+  .header-toggle-btn:hover {
+    background-color: var(--point-color);
+    cursor: pointer;
+  }
+}
