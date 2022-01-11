@@ -5,14 +5,7 @@ window.onload = () => {
 
 
   btn_toggle.onclick = () => {
-    const is_hidden = !gnb_ctr.style.display;
-
-    if(is_hidden) {
-      gnb_ctr.style.display = "none";
-      link_ctr.style.display = "none";
-    } else {
-      gnb_ctr.style.display = "";
-      link_ctr.style.display = "";
-    }
+    gnb_ctr.classList.toggle('active');
+    link_ctr.classList.toggle('active');
   }
 }
