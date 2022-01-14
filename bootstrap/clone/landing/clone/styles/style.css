@@ -1,0 +1,20 @@
+.section-1 {
+  background-image: url("../assets/img/bg-masthead.jpg");
+  height: 600px;
+}
+
+.section-2 {
+  height: 450px;
+}
+
+.section-2-icon {
+  font-size: 4rem;
+}
+
+.section-3 article {
+  height: 480px;
+}
+
+.section-3 .text-box {
+  width: 70%;
+}
