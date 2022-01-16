@@ -1,0 +1,99 @@
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+.carousel-image {
+  display: block;
+  width: 100%;
+  height: 25rem;
+  filter: brightness(80%);
+
+  object-fit: cover;
+}
+
+.carousel-inner-text {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  color: #fff;
+  text-align: center;
+}
+
+.carousel-inner-text .inner-title {
+  font-size: 32px;
+  margin: 0;
+}
+
+.carousel-inner-text .inner-title-sub {
+  margin: 0;
+  margin-top: 18px;
+  
+  font-size: 22px;
+}
+
+.carousel-inner-text .inner-title-btn {
+  margin: 0;
+  margin-top: 48px;
+  padding: 10px 30px 10px 30px;
+  
+  background-color: #5900E7;
+}
+
+#carouselExampleIndicators {
+  margin-bottom: 50px;
+}
+
+.courses {
+  margin-top: 16px;
+  margin-bottom: 70px;
+}
+
+.course-box {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.15);
+}
+
+.wrapper-box {
+  padding: 0 10px 20px 10px;
+}
+
+.course-box {
+  margin: 0;
+}
+
+.course-box .course-image {
+  width: 100%;
+}
+
+.course-box .course-text-box {
+  padding: 10px;
+}
+
+.course-text-box .course-title {
+  font-size: 18px;
+  color: #4A4A4A;
+}
+
+.course-text-box .course-provider {
+  margin-top: 10px;
+}
+
+.course-text-box .course-provider .user-image {
+  width: 20px;
+  height: 20px;
+}
+
+.course-text-box .course-provider .user-name {
+  font-size: 13px;
+  color: #4A4A4A;
+}
