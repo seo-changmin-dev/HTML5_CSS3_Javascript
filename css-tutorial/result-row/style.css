@@ -1,7 +1,106 @@
+:root {
+  --item-background: white;
+  --item-background-hover: whitesmoke;
+  --item-padding: 0.5rem 1rem;
+  --item-border-radius: 0.5rem;
+
+  --property-container-padding: 0.5rem;
+  --property-container-background: white;
+  --property-container-border-color: grey;
+  --property-container-border-radius: 0.5rem;
+
+  --title-margin-right: 0.5rem;
+
+  --property-title-margin-left: 0.5rem;
+  --property-title-margin-right: 0.5rem;
+}
+
 .search-result__item-container {
   list-style: none;
+  padding: 0;
 }
 
 .search-result__item > .property-container {
   list-style: none;
+  padding: 0;
+}
+
+.search-result__item {
+  padding: var(--item-padding);
+
+  display: grid;
+  grid-template-columns: 75% 25%;
+  grid-template-rows: 3rem 6rem;
+
+  border: solid 1px black;
+  border-radius: var(--item-border-radius);
+  background-color: var(--item-background);
+}
+
+.search-result__item:hover {
+  background-color: var(--item-background-hover);
+}
+
+.search-result__item > .title-container {
+  display: flex;
+  flex-flow: row nowrap;
+
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.search-result__item > .title-container > .title {
+  margin-right: var(--title-margin-right);
+
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.search-result__item > .title-container > .title:hover {
+  color: blue;
+}
+
+.search-result__item > .property-container {
+  margin-left: var(--container-margin-left);
+  
+  display: flex;
+  flex-flow: column wrap;
+
+  background-color: var(--property-container-background);
+  border: solid 1px var(--property-container-border-color);
+  border-radius: var(--property-container-border-radius);
+  padding: var(--property-container-padding);
+}
+
+.search-result__item > .property-container > .property {
+  height: 33.333333%;
+
+  display: flex;
+  align-items: center;
+}
+
+.search-result__item > .property-container > .property > .title {
+  margin-left: var(--property-title-margin-left);
+  margin-right: var(--property-title-margin-right);
+}
+
+.href-area {
+  cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  .search-result__item {
+    grid-template-columns: 100% 0%;
+  }
+
+  .search-result__item > .property-container > .property {
+    display: none;
+  }
+
+  .search-result__item > .property-container > .property:nth-child(1),
+  .search-result__item > .property-container > .property:nth-child(2),
+  .search-result__item > .property-container > .property:nth-child(3) {
+    display: block;
+  }
 }
