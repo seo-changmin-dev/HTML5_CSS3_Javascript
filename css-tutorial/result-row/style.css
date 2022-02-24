@@ -1,0 +1,7 @@
+.search-result__item-container {
+  list-style: none;
+}
+
+.search-result__item > .property-container {
+  list-style: none;
+}
